@@ -7,7 +7,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
 import './App.css'
-import Layout from './components/Layout'
+import Layout from './Layout'
 
 const queryClient = new QueryClient()
 

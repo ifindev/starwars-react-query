@@ -3,8 +3,7 @@ import { Link, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Switch, Route, Link as RouterLink } from 'react-router-dom'
 
-import Home from './Home'
-import Dummy from './Dummy'
+import { Dummy, Home } from './components'
 
 export default function Layout(props) {
   const classes = useStyles()
