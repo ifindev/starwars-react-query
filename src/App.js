@@ -17,6 +17,7 @@ function App() {
       <Router>
         <ThemeProvider theme={theme}>
           <Layout />
+          <ReactQueryDevtools initialIsOpen />
         </ThemeProvider>
       </Router>
     </QueryClientProvider>
