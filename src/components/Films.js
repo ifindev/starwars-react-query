@@ -2,11 +2,11 @@ import React from 'react'
 import { Typography, Link } from '@material-ui/core'
 import { Link as RouterLink } from 'react-router-dom'
 import { useQuery } from 'react-query'
-import { fetch } from '../services'
+import { fetchData } from '../services'
 
 const Films = (props) => {
   const { data, status, error } = useQuery('films', () =>
-    fetch('https://swapi.dev/api/films/')
+    fetchData('https://swapi.dev/api/films/')
   )
 
   if (status === 'loading') {
@@ -14,7 +14,12 @@ const Films = (props) => {
   }
 
   if (status === 'error') {
-    return <p>Error :(</p>
+    return (
+      <div>
+        <p>Error :(</p>
+        <p>{error.message}</p>
+      </div>
+    )
   }
 
   return (
