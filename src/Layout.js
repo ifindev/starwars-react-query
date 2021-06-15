@@ -3,7 +3,7 @@ import { Link, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Switch, Route, Link as RouterLink } from 'react-router-dom'
 
-import { Dummy, Home, Films, Film, Characters, Character } from './components'
+import { Home, Films, Film, Characters, Character } from './components'
 
 export default function Layout(props) {
   const classes = useStyles()
@@ -33,7 +33,7 @@ export default function Layout(props) {
             <Characters />
           </Route>
           <Route exact path="/characters/:characterId">
-            <Dummy text={'Single Character'} />
+            <Character />
           </Route>
           <Route path="/">
             <Home />
